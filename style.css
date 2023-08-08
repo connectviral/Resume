@@ -11,6 +11,12 @@ li {
     color: #2f0709;
 }
 
+::selection {
+    background-color: #4a0e11; /* Change to the color you want for the selected text background */
+    color: blanchedalmond; /* Change to the color you want for the selected text */
+}
+
+
 /* Add spacing between sections */
 section {
     margin-bottom: 20px;
@@ -41,13 +47,19 @@ nav a {
     transition: color 0.3s, padding 0.3s;
 }
 
-nav a:hover {
-    color: #feedd1;
-    padding: 10px;
-    text-decoration: underline;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-    transform-origin: left;
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #feedd1;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
 }
 
 nav a.active {
