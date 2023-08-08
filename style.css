@@ -1,0 +1,152 @@
+/* Reset default styling */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    color: #2f0709;
+}
+
+/* Add spacing between sections */
+section {
+    margin-bottom: 20px;
+}
+
+/* Style the header */
+header {
+    background-color: #4a0e11;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, padding 0.3s;
+}
+
+nav a:hover {
+    color: #feedd1;
+    padding: 10px;
+    text-decoration: underline;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+    background: blanchedalmond;
+}
+
+/* Style section headings */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+/* Style job titles in experience section */
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+/* Common section styles */
+section {
+    padding: 20px;
+    margin: 40px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover animation for section headings */
+.section h2:hover {
+    text-decoration: underline;
+    transition: transform 0.3s ease-in;
+    transform-origin: left;
+}
+
+/* Add animation for section highlights on navigation click */
+.section.highlight {
+    background-color: #f7f7f7;
+}
+
+/* Back to Top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.back-to-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #2f0709;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.back-to-top a:hover {
+    background-color: #4a0e11;
+}
+
+/* Show the button after scrolling */
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Style social media icons */
+.social-icons {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 600px) {
+    header img {
+        display: block;
+        margin: 0 auto;
+    }
+}
