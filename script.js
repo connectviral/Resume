@@ -36,10 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             window.scrollTo(scrollOptions);
 
-            // Remove the highlight class after 3 seconds
+            // Remove the highlight class after 1.5 seconds
             setTimeout(() => {
                 targetSection.classList.remove("highlight");
-            }, 3000);
+                link.classList.remove("active");
+            }, 1500);
         });
     });
 });
